@@ -29,7 +29,11 @@ public class Cars {
     }
 
     public List<String> findWinners() {
-        int maxDistance =
+        int maxDistance = findMaxDistance();
+        return cars.stream()
+                .filter(car -> car.getDistance() == maxDistance)
+                .map(Car::getName)
+                .toList();
     }
 
     private int findMaxDistance() {
