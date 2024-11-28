@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class Cars {
 
-    List<Car> cars;
+    private final List<Car> cars;
 
     public Cars(List<String> carNames) {
         this.cars = carNames.stream()
